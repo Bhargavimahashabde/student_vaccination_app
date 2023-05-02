@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Student Vaccination Check Center</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <style>
+ * {
+ box-sizing: border-box;
+ }
+
+ body {
+ font-family: Helvetica Neue, sans-serif;
+ background-color: #f5f5f5;
+ }
+
+ .card {
+ margin: auto;
+ max-width: 600px;
+ background-color: #ffffff;
+ border-radius: 10px;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ padding: 40px;
+ text-align: center;
+ }
+
+ .container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ }
+
+ label {
+ font-size: 24px;
+ font-weight: bold;
+ margin-bottom: 20px;
+ display: block;
+ text-align: center;
+ }
+
+ input[type=text] {
+ padding: 10px 20px;
+ border: 2px solid #ccc;
+ border-radius: 5px;
+ margin-bottom: 30px;
+ font-size: 20px;
+ width: 100%;
+ }
+
+ button[type=submit] {
+ background-color: #007bff;
+ color: #fff;
+ padding: 12px 20px;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ font-size: 20px;
+ margin-bottom: 20px;
+ }
+
+ button[type=submit]:hover {
+ background-color: #0062cc;
+ }
+
+ @media screen and (max-width: 600px) {
+ .card {
+ margin-top: 50px;
+ }
+ }
+ </style>
+</head>
+<body>
+<div class="card">
+ <h1>Student Vaccination Check Center</h1>
+ <form method="POST" action="/vaccination_status" class="container">
+ <label for="name">Enter Student Registration Number</label>
+ <input type="text" id="name" name="name" required>
+ <button type="submit">Check Vaccination Status</button>
+ </form>
+</div>
+</body>
+</html>
